@@ -1,6 +1,7 @@
 <img src="figures/logo.png" width="250"/> 
 
 # Reachability-based Trajectory Design with Neural Implicit Safety Constraints
+[Project Page](https://roahmlab.github.io/RDF/) | [Paper](https://arxiv.org/abs/2302.07352) | [Dataset](https://drive.google.com/drive/folders/1sxRCtuAwi2Ua5BIVX0fLqOBlb95PcFN0?usp=share_link)
 
 ## Introduction
 We present Reachability-based Signed Distance Functions (RDFs) as a neural implicit representation for robot safety. RDF, which can be constructed using supervised learning in a tractable fashion, accurately predicts the distance between the swept volume of a robot arm and an obstacle. RDF’s inference and gradient computations are fast and scale linearly with the dimension of the system; these features enable its use within a novel real-time trajectory planning framework as a continuous-time collision-avoidance constraint. The planning method using RDF is compared to a variety of state-of-the-art techniques and is demonstrated to successfully solve challenging motion planning tasks for high-dimensional systems faster and more reliably than all tested methods.
