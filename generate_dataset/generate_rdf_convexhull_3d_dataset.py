@@ -276,12 +276,7 @@ if __name__ == '__main__':
     link_params, _ = load_sinlge_robot_arm_params('Kinova3')
     link_zonos = [l.to_polyZonotope() for l in link_params['link_zonos']]
 
-    # generate_dataset(n_links=link_params['n_joints'], n_dims=n_dims, N=params.n_data, 
-    #     num_obstacles_each_initial_condition=params.n_obs, output_dataset_filename=output_filename, 
-    #     verbose=params.verbose, plot=params.plot, save=params.save, signed=params.signed, 
-    #     params=link_params, link_zonos=link_zonos)
-    
-    generate_dataset(n_links=link_params['n_joints'], n_dims=3, N=8, 
-        num_obstacles_each_initial_condition=8, output_dataset_filename=output_filename, 
-        verbose=1, plot=True, save=False, signed=True, 
+    generate_dataset(n_links=link_params['n_joints'], n_dims=n_dims, N=params.n_data, 
+        num_obstacles_each_initial_condition=params.n_obs, output_dataset_filename=output_filename, 
+        verbose=params.verbose, plot=params.plot, save=params.save, signed=params.signed, 
         params=link_params, link_zonos=link_zonos)
