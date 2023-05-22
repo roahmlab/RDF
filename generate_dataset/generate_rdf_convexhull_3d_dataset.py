@@ -92,8 +92,6 @@ def generate_dataset(params, link_zonos,n_links=7, n_dims=3, N=1e6, signed=False
             vertices_over_timesteps = torch.zeros(0, n_dims)
             # for every obstalce, buffer the link zono with obs zono and get a convex hull
             for t in range(n_timesteps):
-                import pdb;pdb.set_trace()
-
                 # buffer the link zonotope
                 link_zono = batched_links_zonotopes[i_joint][t]
                 buffered_link_zono_Z = torch.vstack((link_zono.Z, obs_generators))
@@ -112,7 +110,7 @@ def generate_dataset(params, link_zonos,n_links=7, n_dims=3, N=1e6, signed=False
         if plot:
             fig, (ax,ax2) = plt.subplots(1,2,subplot_kw=dict(projection='3d'))
             for i_joint in range(n_links):
-                hull = convex_hulls[i_joint][0] # TODO: [0] because all obstacles all the same
+                hull = convex_hulls[i_joint]
                 points = hull.points
                 points = points.reshape((1,)+points.shape)
                 hull_patch = np.concatenate([points[:,s] for s in hull.simplices])
@@ -278,8 +276,12 @@ if __name__ == '__main__':
     link_params, _ = load_sinlge_robot_arm_params('Kinova3')
     link_zonos = [l.to_polyZonotope() for l in link_params['link_zonos']]
 
+    # generate_dataset(n_links=link_params['n_joints'], n_dims=n_dims, N=params.n_data, 
+    #     num_obstacles_each_initial_condition=params.n_obs, output_dataset_filename=output_filename, 
+    #     verbose=params.verbose, plot=params.plot, save=params.save, signed=params.signed, 
+    #     params=link_params, link_zonos=link_zonos)
     
-    generate_dataset(n_links=link_params['n_joints'], n_dims=n_dims, N=params.n_data, 
-        num_obstacles_each_initial_condition=params.n_obs, output_dataset_filename=output_filename, 
-        verbose=params.verbose, plot=params.plot, save=params.save, signed=params.signed, 
+    generate_dataset(n_links=link_params['n_joints'], n_dims=3, N=8, 
+        num_obstacles_each_initial_condition=8, output_dataset_filename=output_filename, 
+        verbose=1, plot=True, save=False, signed=True, 
         params=link_params, link_zonos=link_zonos)

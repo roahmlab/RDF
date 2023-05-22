@@ -248,8 +248,7 @@ if __name__ == '__main__':
         'n_joints':N_joints}
     link_zonos = [zonotope(torch.tensor([[0.5,0.5,0.0],[0.0,0.0,0.01],[0.0,0.0,0.0]]).T / scale_down).to_polyZonotope()]*N_joints
     
-    
     generate_dataset(n_links=N_joints, n_dims=n_dims, N=params.n_data, 
         num_obstacles_each_initial_condition=params.n_obs, output_dataset_filename=output_filename, 
-        verbose=params.verbose, plot=params.plot, save=params.save, signed=params.signed, 
+        verbose=params.verbose, plot=True, save=params.save, signed=params.signed, 
         params=link_params, link_zonos=link_zonos)
