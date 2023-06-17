@@ -171,6 +171,23 @@
         <h1 class="midtitle"><span class="c1">R</span>eachability-based signed <span class="c1">D</span>istance <span class="c1">F</span>unction</h1>
         <h1 class="subtitle">Reachability-based Trajectory Design with Neural Implicit Safety Constraints</h1>
         <h1 class="subtitle">RSS 2023</h1>
+
+        <!-- Author picture-->
+        <div class="row" style="max-width: 800; height: 80pt">
+            <div class="col" style="width: 25%; line-height: 50pt;">
+                <img src="./web_elements/jmichaux.png" alt style="border-radius: 50%; "height="120pt" />
+            </div>
+            <div class="col" style="width: 25%; line-height: 50pt;">
+                <img src="./web_elements/chenqy.png" alt style="border-radius: 50%;" height="120pt" />
+            </div>
+            <div class="col" style="width: 25%; line-height: 50pt;">
+                <img src="./web_elements/kwonys.png" alt style="border-radius: 50%;" height="120pt" />
+            </div>
+            <div class="col" style="width: 25%; line-height: 50pt;">
+                <img src="./web_elements/ramv.png" alt style="border-radius: 50%;" height="120pt" />
+            </div>
+        </div>
+
         <!-- Author name-->
         <div class="row">
             <div class="col" style="font-weight: 200;">
@@ -225,28 +242,27 @@
     </div>
 
     <!-- Overview Video -->
+    <!--
     <div class="container" style="padding-top: 0pt;">
         <h2 class="section_title">Overview Video</h2>
         <video width="100%" controls>
             <source src="TODO: put the video in the wiki and copy the link here">
         </video>
-    </div>
+    </div>-->
     
 
     <!-- Introduction -->
-    <div class="container" style="background-color:#f2f2f2">
-        <h2 class="section_title">Introduction</h2>
+    <div class="container" style="background-color:#f2f2f2; padding-top:10pt;">
+        <h2 class="section_title">Abstract</h2>
         <p class="body">Generating safe motion plans in real-time is a key
             requirement for deploying robot manipulators to assist humans
             in collaborative settings. In particular, robots must satisfy strict
             safety requirements to avoid damaging itself or harming nearby
             humans. This is particularly challenging if the robot must
             also operate in real-time to quickly adjust to changes in its
-            environment. </p>
-        <div class="image">
-            <img src="web_elements\final_figure_with_axes_divider.png", width="700pt">
-        </div>
-        <p class="body">This paper addresses these challenges by proposing
+            environment.  <br>
+
+            This paper addresses these challenges by proposing
             Reachability-based Signed Distance Functions (RDFs) as a neural
             implicit representation for robot safety. RDF, trained using
             supervised learning, accurately predicts the distance between the
@@ -261,28 +277,126 @@
     </div>
 
     <!-- Method -->
-    <div class="container">
+    <div class="container" style="padding-top: auto; margin-top:auto;">
         <h2 class="section_title">Method</h2>
-        <p class="body">TODO: method</p>
-        <div style="text-align: center;">
-            <img src="TODO: method figure", width="900pt">
-        </div>
+        <!--<p class="body">TODO: method</p>-->
+        <div class="row" style="margin-left:auto; margin-right:auto; margin-top:auto; white-space:nowrap; width:100%; height:400px">
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 50%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%; margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\reconstruction_nominal_50fps.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 50%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%;margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\reconstruction_rdf_50fps.webm" type="video/webm">
+                </video>
+            </div>
+        </div> 
     </div>
 
     <!-- Results -->
     <div class="container">
         <h2 class="section_title">Results</h2>
-        <p class="body">TODO: results</p>
-        <div style="text-align: center;">
-            <img src="TODO: result figure", width="900pt">
+        <!--<p class="body">TODO: results</p>-->
+        <div class="row" style="margin-left:auto; margin-right:auto; margin-top:auto; white-space:nowrap; width:100%; height:180px">
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 33.3%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%; margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\scene_1_40fps.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 33.3%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%; margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\scene_2_40fps.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 33.4%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%; margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\scene_3_40fps.webm" type="video/webm">
+                </video>
+            </div>
+        </div> 
+
+        <div class="row" style="margin-left:auto; margin-right:auto; margin-top:auto; white-space:nowrap; width:100%; height:180px">
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 33.3%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%; margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\scene_4_40fps.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 33.3%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%;margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\scene_5_40fps.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 33.4%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%;margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\scene_6_40fps.webm" type="video/webm">
+                </video>
+            </div>
+        </div> 
+
+        <div class="row" style="margin-left:auto; margin-right:auto; margin-top:auto; white-space:nowrap; width:100%; height:180px">
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 33.3%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%; margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\scene_7_40fps.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 33.3%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%;margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\scene_15_40fps.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 33.4%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%;margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\scene_9_40fps.webm" type="video/webm">
+                </video>
+            </div>
+        </div> 
+
+        <div class="row" style="margin-left:auto; margin-right:auto; margin-top:auto; white-space:nowrap; width:100%; height:180px">
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 33.3%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%; margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\scene_10_40fps.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 33.3%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%;margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\scene_11_40fps.webm" type="video/webm">
+                </video>
+            </div>
+            <div class="col" style="margin-left:auto; margin-right:auto; width: 33.4%; height: 100%;">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 100%; height: 100%;margin-left:auto; margin-right:auto;">
+                    <source src="web_elements\scene_12_40fps.webm" type="video/webm">
+                </video>
+            </div>
+        </div> 
+        <!-- Slideshow videos
+        <div id="slideshow" style="width: 100%; overflow-x: scroll; white-space: nowrap; ">
+            <div class="video-container">
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 320px; height: 180px; margin-right: 20px;">
+                    <source src="web_elements\scene_1_40fps.webm" type="video/webm">
+                </video>
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 320px; height: 180px; margin-right: 20px;">
+                    <source src="web_elements\scene_1_40fps.webm" type="video/webm">
+                </video>
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 320px; height: 180px; margin-right: 20px;">
+                    <source src="web_elements\scene_1_40fps.webm" type="video/webm">
+                </video>
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 320px; height: 180px; margin-right: 20px;">
+                    <source src="web_elements\scene_1_40fps.webm" type="video/webm">
+                </video>
+                <video preload="auto" controls autoplay muted loop style="display: inline-block; width: 320px; height: 180px; margin-right: 20px;">
+                    <source src="web_elements\scene_1_40fps.webm" type="video/webm">
+                </video>
+            </div>
         </div>
+        -->
     </div>
 
     <!-- Citation -->
     <div class="container" style="background-color:#f2f2f2">
         <h2 class="section_title">Citation</h2>
         <ul class="body" style="padding-left:50pt; font-size: 10pt; line-height: 15pt;">
-            <li>This work is supported by the Ford Motor Company via the Ford-UM Alliance under award N022977, National Science Foundation Career Award #1751093 and by the Office of Naval Research under Award Number N00014- 18-1-2575</li>
+            <li>This work is supported by the Ford Motor Company via the Ford-UM Alliance under award N022977, National Science Foundation Career Award #1751093 and by the Office of Naval Research under Award Number N00014-18-1-2575</li>
             <li>RDF was developed in <a href="http://www.roahmlab.com" style = "text-decoration: none;color:#777777">Robotics and Optimization for Analysis of Human Motion (ROAHM) Lab</a> at University of Michigan - Ann Arbor.</li>
             <ul style="padding-left:0"><div style="background-color:#e6e6e6;">
                 <p class="body" style="padding-left:0pt; font-size: 10pt;padding-bottom:0;text-indent:-3rem;margin-left:4rem;font-family:monospace;line-height: 1.2rem;">  @misc{michaux2023reachabilitybased, <br>
